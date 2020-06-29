@@ -1,0 +1,14 @@
+
+<table class="table"  *ngFor="let cd of list">
+    <div class="row">
+        <div class="col-ls-6">
+            <p>NOMBRE</p>
+            <P>DESCRIPCION</P>
+        </div>
+        <div class="col-ls-6">
+            <p>{{ cd.comentario_tipo }}</p>
+            <p>{{ cd.comentario_descripcion }}</p>
+        </div>
+    </div>
+    <button type="button" class="btn btn-danger">responder</button>
+</table>
