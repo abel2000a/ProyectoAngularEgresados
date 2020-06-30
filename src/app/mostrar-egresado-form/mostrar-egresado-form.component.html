@@ -1,0 +1,70 @@
+
+        <form [formGroup]="EgresadoForm" (ngSubmit)="save()">
+            <!--<div [hidden]="false">
+                <input type="text" formControlName="egresado_id" name="egresado_id" id="egresado_id" >
+            </div> readonly=»readonly»-->
+            <br>
+            <label>
+                Nombre:
+                <input type="text"  formControlName="egresado_nombre" name="egresado_nombre" id="egresado_nombre" required>
+                <div [hidden]="EgresadoForm.get('egresado_nombre').valid || 
+                EgresadoForm.get('egresado_nombre').pristine" class="alert alert-danger">
+                    Titulo is required
+                </div>
+            </label>
+            
+            <br>
+            
+            <label>
+                Apellido Materno:
+                <input type="text"  formControlName="egresado_ap_materno" name="egresado_ap_materno" id="egresado_ap_materno" required>
+                <div [hidden]="EgresadoForm.get('egresado_ap_materno').valid || 
+                EgresadoForm.get('egresado_ap_materno').pristine" class="alert alert-danger">
+                    Titulo is required
+                </div>
+            </label>
+            <br>
+            <label>
+                Apellido Paterno:
+                <input type="text"  formControlName="egresado_ap_paterno" name="egresado_ap_paterno" id="egresado_ap_paterno" required>
+            </label>
+            <br>
+            <label>
+                Estado:
+                <input type="text" formControlName="egresado_estado" name="egresado_estado" id="egresado_estado" required>
+            </label>
+            <br>
+            <label>
+                Dni:
+                <input type="text" formControlName="egresado_dni" name="egresado_dni" id="egresado_dni" required>
+            </label>
+            <br>
+            <label>
+                Fecha de nacimiento:
+                <input type="date"  formControlName="egresado_fecha_nacimiento" name="egresado_fecha_nacimiento" id="egresado_fecha_nacimiento" required>
+            </label>
+            <br>
+            <label>
+                Celular:
+                <input type="text" formControlName="egresado_celular" name="egresado_celular" id="egresado_celular" required>
+            </label>
+            <br>
+            <label>
+                Codigo:
+                <input type="text" formControlName="egresado_codigo" name="egresado_codigo" id="egresado_codigo" required>
+            </label>
+            <br>
+            <label>
+                rol:
+                <input type="text" formControlName="roles_id" name="roles_id" id="roles_id" required>
+            </label>
+            <br>
+            <label>
+                Escuela profesional:
+                <input type="text"  formControlName="ep_id" name="ep_id" id="ep_id" required>
+            </label>
+            <br>
+            <button type="submit" [disabled]="!EgresadoForm.valid">Save</button>
+            
+        </form>
+        <!--<p>{{ EgresadoForm.value | json }}</p>-->

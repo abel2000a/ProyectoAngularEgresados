@@ -42,6 +42,8 @@ import { ComentariosenviosIndexComponent } from './comentariosenvios-index/comen
 import { CursosoferIndexComponent } from './cursosofer-index/cursosofer-index.component';
 import { OfertalabIndexComponent } from './ofertalab-index/ofertalab-index.component';
 import { IndexIndexComponent } from './index-index/index-index.component';
+import { MostrarEgresadoIndexComponent } from './mostrar-egresado-index/mostrar-egresado-index.component';
+import { MostrarEgresadoFormComponent } from './mostrar-egresado-form/mostrar-egresado-form.component';
 
 const appRoutes: Routes = [
 
@@ -75,7 +77,14 @@ const appRoutes: Routes = [
   { path: 'egresadoform/:id',  component: EgresadoFormComponent },
 
 
+  { path: 'mostraregresadosindex',  component: MostrarEgresadoIndexComponent ,
+  canActivate: [AfterLoginService]},
+  { path: 'mostraregresadosform',  component: MostrarEgresadoFormComponent ,
+  canActivate: [AfterLoginService]},
+  { path: 'mostraregresadosform/:id',  component: MostrarEgresadoFormComponent ,
+  canActivate: [AfterLoginService]},
 
+  
   
   { path: 'oferta_laboral',  component: OfertaLaboralComponent,
   canActivate: [AfterLoginService] },
@@ -121,7 +130,9 @@ const appRoutes: Routes = [
     ComentariosenviosIndexComponent,
     CursosoferIndexComponent,
     OfertalabIndexComponent,
-    IndexIndexComponent
+    IndexIndexComponent,
+    MostrarEgresadoIndexComponent,
+    MostrarEgresadoFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,34 @@
+
+    <input class = "form-control mr-sm-2" type = "text" placeholder = "Buscar">
+    <button class = "btn btn-secundario my-2 my-sm-0" type = "submit"> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Buscar </font> </font> </button>
+    
+    <button type="button"  routerLink="/mostraregresadosform" routerLinkActive="active" class="btn btn-secondary"> agregar </button>
+
+    <table class="table" >
+        <thead class="thead-secundary bg-primary">
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Apellido Paaterno</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Nro Celular</th>
+            <th scope="col">Escuela Profesional</th>
+            <th scope="col">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let ed of list">
+            <td >{{ ed.egresado_codigo }}</td>
+            <td>{{ ed.egresado_ap_paterno }}</td>
+            <td>{{ ed.egresado_ap_materno }}</td>
+            <td>{{ ed.egresado_nombre }}</td>
+            <td >{{ ed.egresado_dni }}</td>
+            <td >{{ ed.egresado_celular }}</td>
+            <td >{{ ed.ep_id }}</td>
+            <td>{{ ed.egresado_estado }}</td>
+            <span><button (click)="delete(ed.egresado_id)">Delete</button></span>
+            <td ><button type="button"  routerLink="/mostraregresadosform/{{ ed.egresado_id }}" routerLinkActive="active" class="btn btn-secondary"> editar </button></td>
+          </tr>
+        </tbody>
+</table>
