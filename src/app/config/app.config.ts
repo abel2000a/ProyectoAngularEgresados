@@ -2,7 +2,7 @@ import { InjectionToken } from '@angular/core';
 
 export let APP_CONFIG = new InjectionToken('app.config');
 
-const baseUrl: any =  'http://localhost:8000/api/';
+const baseUrl: any =  'https://laravelegresados-12.herokuapp.com/api/';
 
 export  const AppConfig: any = {
 
