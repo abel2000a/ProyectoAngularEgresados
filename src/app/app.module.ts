@@ -34,16 +34,16 @@ import { CapacitacionFormComponent } from './capacitacion-form/capacitacion-form
 import { EgresadoFormComponent } from './egresado-form/egresado-form.component';
 import { EgresadoDatosIndexComponent } from './egresado-datos-index/egresado-datos-index.component';
 import { DatosGeneralesIndexComponent } from './datos-generales-index/datos-generales-index.component';
-import { ComentariodatosIndexComponent } from './comentariodatos-index/comentariodatos-index.component';
 import { OfertaLaboralComponent } from './oferta-create/oferta-laboral.component';
 import { PerfilegresadoComponent } from './perfilegresado/perfilegresado.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { ComentariosenviosIndexComponent } from './comentariosenvios-index/comentariosenvios-index.component';
 import { CursosoferIndexComponent } from './cursosofer-index/cursosofer-index.component';
 import { OfertalabIndexComponent } from './ofertalab-index/ofertalab-index.component';
 import { IndexIndexComponent } from './index-index/index-index.component';
 import { MostrarEgresadoIndexComponent } from './mostrar-egresado-index/mostrar-egresado-index.component';
 import { MostrarEgresadoFormComponent } from './mostrar-egresado-form/mostrar-egresado-form.component';
+import { DetalleIndexComponent } from './detalle-index/detalle-index.component';
+import { DetalleFormComponent } from './detalle-form/detalle-form.component';
 
 const appRoutes: Routes = [
 
@@ -53,14 +53,7 @@ const appRoutes: Routes = [
   { path: 'clienteform/:id',  component: ClienteFormComponent },
 
 
-  { path: 'comentarioenvio',  component: ComentariosenviosIndexComponent ,
-  canActivate: [AfterLoginService]},
-
-
   { path: 'curosofer',  component: CursosoferIndexComponent ,
-  canActivate: [AfterLoginService]},
-
-  { path: 'comentarioindex',  component: ComentariodatosIndexComponent,
   canActivate: [AfterLoginService]},
 
   { path: 'egresadodatosindex',  component: EgresadoDatosIndexComponent ,
@@ -70,21 +63,20 @@ const appRoutes: Routes = [
   { path: 'datosgeneralesindex',  component: DatosGeneralesIndexComponent ,
   canActivate: [AfterLoginService]},
 
-
-  { path: 'egresadoindex',  component: EgresadoIndexComponent,
-  canActivate: [AfterLoginService] },
-  { path: 'egresadoform',  component: EgresadoFormComponent },
-  { path: 'egresadoform/:id',  component: EgresadoFormComponent },
-
-
   { path: 'mostraregresadosindex',  component: MostrarEgresadoIndexComponent ,
   canActivate: [AfterLoginService]},
   { path: 'mostraregresadosform',  component: MostrarEgresadoFormComponent ,
   canActivate: [AfterLoginService]},
   { path: 'mostraregresadosform/:id',  component: MostrarEgresadoFormComponent ,
   canActivate: [AfterLoginService]},
-
   
+  
+  { path: 'detalleindex',  component: DetalleIndexComponent ,
+  canActivate: []},
+  { path: 'detalleform',  component: DetalleFormComponent ,
+  canActivate: []},
+  { path: 'detalleform/:id',  component: DetalleFormComponent ,
+  canActivate: []},
   
   { path: 'oferta_laboral',  component: OfertaLaboralComponent,
   canActivate: [AfterLoginService] },
@@ -123,16 +115,18 @@ const appRoutes: Routes = [
     EgresadoFormComponent,
     EgresadoDatosIndexComponent,
     DatosGeneralesIndexComponent,
-    ComentariodatosIndexComponent,
+
     OfertaLaboralComponent,
     PerfilegresadoComponent,
     FilterPipe,
-    ComentariosenviosIndexComponent,
+
     CursosoferIndexComponent,
     OfertalabIndexComponent,
     IndexIndexComponent,
     MostrarEgresadoIndexComponent,
-    MostrarEgresadoFormComponent
+    MostrarEgresadoFormComponent,
+    DetalleIndexComponent,
+    DetalleFormComponent
   ],
   imports: [
     BrowserModule,

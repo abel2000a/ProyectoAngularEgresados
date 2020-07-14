@@ -1,0 +1,32 @@
+<form [formGroup]="detalleForm" (ngSubmit)="save()">
+    <div [hidden]="false">
+        <input type="text" formControlName="detalle_id" name="detalle_id" id="detalle_id" >
+    </div>
+    <br>
+    <label>
+        cargo:
+        <input type="text"  formControlName="detalle_cargo" name="detalle_cargo" id="detalle_cargo" required>
+            
+    </label>
+    
+    <br>
+    <label>
+         fecha de inicio:
+        <input type="date"  formControlName="detalle_inicio" name="detalle_inicio" id="detalle_inicio" required>
+    </label>
+    <br>
+    <label>
+        fecha fin:
+        <input type="date"  formControlName="detalle_fin" name="detalle_fin" id="detalle_fin" required>
+    </label>
+    <br>
+    <label>
+        empresa:
+        <input type="text" formControlName="empresa_id" name="empresa_id" id="empresa_id" required>
+    </label>
+    <br>
+    
+    <button type="submit" [disabled]="!detalleForm.valid">Save</button>
+    
+</form>
+<p>{{ detalleForm.value | json }}</p>

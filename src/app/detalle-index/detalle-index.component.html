@@ -1,0 +1,21 @@
+<button type="button"  routerLink="/detalleform" routerLinkActive="active" class="btn btn-secondary"> agregar </button>
+<table class="table" >
+    <thead class="thead-secundary bg-black">
+      <tr>
+        <th scope="col">Cargo</th>
+        <th scope="col">Detalle inicio</th>
+        <th scope="col">Detalle fin</th>
+        <th scope="col">Empresa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dt of list">
+        <td >{{ dt.detalle_cargo }}</td>
+        <td>{{ dt.detalle_inicio }}</td>
+        <td>{{ dt.detalle_fin }}</td>
+        <td>{{ dt.empresa_id }}</td>
+        <span><button (click)="delete(dt.detalle_id)">Delete</button></span>
+        <td ><button type="button"  routerLink="/detalleform/{{ dt.detalle_id }}" routerLinkActive="active" class="btn btn-secondary"> editar </button></td>
+      </tr>
+    </tbody>
+</table>
