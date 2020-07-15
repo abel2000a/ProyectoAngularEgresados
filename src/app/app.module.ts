@@ -44,6 +44,9 @@ import { MostrarEgresadoIndexComponent } from './mostrar-egresado-index/mostrar-
 import { MostrarEgresadoFormComponent } from './mostrar-egresado-form/mostrar-egresado-form.component';
 import { DetalleIndexComponent } from './detalle-index/detalle-index.component';
 import { DetalleFormComponent } from './detalle-form/detalle-form.component';
+import { CursoIndexComponent } from './curso-index/curso-index.component';
+import { CursoFormComponent } from './curso-form/curso-form.component';
+import { EmpresaIndexComponent } from './empresa-index/empresa-index.component';
 
 const appRoutes: Routes = [
 
@@ -72,15 +75,23 @@ const appRoutes: Routes = [
   
   
   { path: 'detalleindex',  component: DetalleIndexComponent ,
-  canActivate: []},
+  canActivate: [AfterLoginService]},
   { path: 'detalleform',  component: DetalleFormComponent ,
-  canActivate: []},
+  canActivate: [AfterLoginService]},
   { path: 'detalleform/:id',  component: DetalleFormComponent ,
-  canActivate: []},
+  canActivate: [AfterLoginService]},
   
   { path: 'oferta_laboral',  component: OfertaLaboralComponent,
   canActivate: [AfterLoginService] },
 
+  { path: 'cursos_index',  component: CursoIndexComponent,
+  canActivate: [AfterLoginService] },
+
+  { path: 'cursos_form',  component: CursoFormComponent,
+  canActivate: [AfterLoginService] },
+
+  { path: 'empresa_index',  component: EmpresaIndexComponent,
+  canActivate: [AfterLoginService] },
 
   { path: 'ofertaindex',  component: OfertalabIndexComponent ,
   canActivate: [AfterLoginService]},
@@ -126,7 +137,10 @@ const appRoutes: Routes = [
     MostrarEgresadoIndexComponent,
     MostrarEgresadoFormComponent,
     DetalleIndexComponent,
-    DetalleFormComponent
+    DetalleFormComponent,
+    CursoIndexComponent,
+    CursoFormComponent,
+    EmpresaIndexComponent
   ],
   imports: [
     BrowserModule,

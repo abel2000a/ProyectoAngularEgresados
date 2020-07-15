@@ -1,0 +1,29 @@
+<form [formGroup]="CursoForm" (ngSubmit)="save()">
+    <div [hidden]="false">
+        <input type="text" formControlName="cursos_id" name="cursos_id" id="cursos_id" >
+    </div>
+    <br>
+    <label>
+        Nombre:
+        <input type="text"  formControlName="cursos_nombre" name="cursos_nombre" id="cursos_nombre" required>
+    </label>
+    
+    <br>
+    <label>
+        Lugar:
+        <input type="text"  formControlName="curso_lugar" name="curso_lugar" id="curso_lugar" required>
+    </label>
+    <br>
+    <label>
+        Fecha:
+        <input type="date" formControlName="curso_fecha" name="curso_fecha" id="curso_fecha" required>
+    </label>
+    <br>
+    <label>
+        egresado id:
+        <input type="text" formControlName="egresado_id" name="egresado_id" id="egresado_id" required>
+    </label>
+    <br>
+    <button type="submit" [disabled]="!CursoForm.valid">Save</button>
+    
+</form>

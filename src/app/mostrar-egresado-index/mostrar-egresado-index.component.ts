@@ -31,6 +31,5 @@ export class MostrarEgresadoIndexComponent implements OnInit {
       this.getList();
     });
   }
-s
 
 }

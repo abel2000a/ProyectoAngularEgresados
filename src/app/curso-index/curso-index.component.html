@@ -1,0 +1,24 @@
+<button type="button"  routerLink="/cursos_form" routerLinkActive="active" class="btn btn-secondary"> agregar </button>
+
+
+<table class="table" >
+    <thead class="thead-secundary bg-primary">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Lugar</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Egresado_id</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mc of list">
+        <td >{{ mc.cursos_nombre }}</td>
+        <td>{{ mc.curso_lugar }}</td>
+        <td>{{ mc.curso_fecha }}</td>
+        <td>{{ mc.egresado_id }}</td>
+        <span><button (click)="delete(mc.cursos_id)">Delete</button></span>
+        <td ><button type="button"  routerLink="/cursos_form/{{ mc.cursos_id }}" routerLinkActive="active" class="btn btn-secondary"> editar </button></td>
+      </tr>
+    </tbody>
+</table>
