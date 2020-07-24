@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between"  >
         <a class="navbar-brand" routerLink="perfilegresado">
           <img src="/assets/imagenes/aea.png" width="250" height="50" class="d-inline-block align-top" alt="">
         </a>
@@ -8,96 +8,33 @@
         </button>
       
         <div class="collapse navbar-collapse" id="navbarColor01" *ngIf="loggedIn">
-          <ul class="navbar-nav mr-auto"  >
-            <li class="nav-item active">
-              <a class="nav-link" routerLink="/egresadodatosindex">persona <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/empresa_index">EMPRESA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/datosgeneralesindex">Datos Generales</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/cursos_index">cursos</a>
-            </li>
-               <li class="nav-item">
-                <a class="nav-link" routerLink="/mostraregresadosindex">Egresados</a>                
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="/detalleindex">Detalle de trabajo</a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto"  >
+                <li class="nav-item active">
+                  <a class="nav-link" routerLink="/mostraregresadosindex">EGRESADO <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/empresa_index">EMPRESA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/cursos_index">CURSOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/detalleindex">DETALLE DEL TRABAJO</a>
+                </li>
+            </ul>
           
         </div>
-        <div>
-            <a class="navbar-brand" routerLink="login" *ngIf="!loggedIn">Login</a>
-            
-            <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Logout</a>
-            
-          <a class="navbar-brand" routerLink="perfilegresado" *ngIf="loggedIn">Profile</a>
+        <div>           
+            <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Cerrar sesion</a>
+              
+            <a class="navbar-brand" routerLink="perfilegresado" *ngIf="loggedIn">Perfil</a>
         </div>
         <div class="logo">
-            <img class="logoclas" src="/assets/imagenes/Logo-UPeU.png" alt="Logo" width="50px">
+            <img class="logoclas" src="/assets/imagenes/Logo-UPeU.png" alt="Logo" width="80px">
         </div>
         
-      </nav> 
-<div class="row" >
-  <div *ngIf="loggedIn" class="col-lg-2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light list-group list-group-vertical" >
-        <a class="navbar-brand" href="#">INICIO</a>
+</nav> 
 
-       <button class="navbar-toggler" type="button" data-toggle="collapse" 
-       data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       
-         <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
-         <ul class="navbar-nav mr-auto ">
-           <li class="nav-item ">
-             <a class="nav-link" href="#">Opiniones <span class="sr-only">(current)</span></a>
-           </li>
-         </ul>
-       </div> 
-       <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
-         <ul class="navbar-nav mr-auto ">
-           <li class="nav-item ">
-             <a class="nav-link" routerLink="datosgeneralesindex">DATOS PERSONALES <span class="sr-only">(current)</span></a>
-           </li>
-         </ul>
-       </div>
-       <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
-         <ul class="navbar-nav mr-auto ">
-           <li class="nav-item ">
-             <a class="nav-link" routerLink="oferta_laboral">OFERTA DE EMPLEOS <span class="sr-only">(current)</span></a>
-           </li>
-         </ul>
-       </div> 
-       <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
-         <ul class="navbar-nav mr-auto ">
-           <li class="nav-item ">
-             <a class="nav-link" href="#">EXPERIENCIA LABORAL <span class="sr-only">(current)</span></a>
-           </li>
-         </ul>
-       </div>
-       <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
-         <ul class="navbar-nav mr-auto ">
-           <li class="nav-item ">
-                     <img src="../assets/imagenes/16363.png" width="200" height="150">
-           </li>
-         </ul>
-       </div>
-       <div class="collapse navbar-collapse list-group list-group-vertical " id="navbarText">
-           <ul class="navbar-nav mr-auto ">
-             <li class="nav-item ">
-               <a class="nav-link" (click)="logout($event)" href="#">SALIR <span class="sr-only">(current)</span></a>
-             </li>
-           </ul>
-         </div>
-
-     </nav>
-</div>
-  <div class="col-lg-9">              
-        <app-index-index></app-index-index>      
-  </div> 
-</div>
+<div class="col-lg-12">              
+  <app-index-index></app-index-index>      
+</div> 

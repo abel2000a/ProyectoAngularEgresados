@@ -24,21 +24,9 @@ import { BeforeLoginService } from './services/auth/before-login.service';
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
-
-import { ClienteIndexComponent } from './cliente-index/cliente-index.component';
-import { ClienteFormComponent } from './cliente-form/cliente-form.component';
-import { CapacitacionIndexComponent } from './capacitacion-index/capacitacion-index.component';
 import { EgresadoIndexComponent } from './egresado-index/egresado-index.component';
-import { CapacitacionFormComponent } from './capacitacion-form/capacitacion-form.component';
 import { EgresadoFormComponent } from './egresado-form/egresado-form.component';
-import { EgresadoDatosIndexComponent } from './egresado-datos-index/egresado-datos-index.component';
-import { DatosGeneralesIndexComponent } from './datos-generales-index/datos-generales-index.component';
-import { OfertaLaboralComponent } from './oferta-create/oferta-laboral.component';
-import { PerfilegresadoComponent } from './perfilegresado/perfilegresado.component';
 import { FilterPipe } from './pipes/filter.pipe';
-import { CursosoferIndexComponent } from './cursosofer-index/cursosofer-index.component';
-import { OfertalabIndexComponent } from './ofertalab-index/ofertalab-index.component';
 import { IndexIndexComponent } from './index-index/index-index.component';
 import { MostrarEgresadoIndexComponent } from './mostrar-egresado-index/mostrar-egresado-index.component';
 import { MostrarEgresadoFormComponent } from './mostrar-egresado-form/mostrar-egresado-form.component';
@@ -52,26 +40,9 @@ import { EmpresaFormComponent } from './empresa-form/empresa-form.component';
 const appRoutes: Routes = [
 
 
-  { path: 'clienteindex',  component: ClienteIndexComponent },
-  { path: 'clienteform',  component: ClienteFormComponent },
-  { path: 'clienteform/:id',  component: ClienteFormComponent },
-
-
-  { path: 'curosofer',  component: CursosoferIndexComponent ,
-  canActivate: [AfterLoginService]},
-
-  { path: 'egresadodatosindex',  component: EgresadoDatosIndexComponent ,
-  canActivate: [AfterLoginService]},
-
-
-  { path: 'datosgeneralesindex',  component: DatosGeneralesIndexComponent ,
-  canActivate: [AfterLoginService]},
-
   { path: 'mostraregresadosindex',  component: MostrarEgresadoIndexComponent ,
   canActivate: [AfterLoginService]},
   { path: 'mostraregresadosform',  component: MostrarEgresadoFormComponent ,
-  canActivate: [AfterLoginService]},
-  { path: 'mostraregresadosform/:id',  component: MostrarEgresadoFormComponent ,
   canActivate: [AfterLoginService]},
   
   
@@ -79,32 +50,16 @@ const appRoutes: Routes = [
   canActivate: [AfterLoginService]},
   { path: 'detalleform',  component: DetalleFormComponent ,
   canActivate: [AfterLoginService]},
-  { path: 'detalleform/:id',  component: DetalleFormComponent ,
-  canActivate: [AfterLoginService]},
-  
-  { path: 'oferta_laboral',  component: OfertaLaboralComponent,
-  canActivate: [AfterLoginService] },
 
   { path: 'cursos_index',  component: CursoIndexComponent,
   canActivate: [AfterLoginService] },
-
   { path: 'cursos_form',  component: CursoFormComponent,
-  canActivate: [AfterLoginService] },
-  { path: 'cursos_form/:id',  component: CursoFormComponent,
   canActivate: [AfterLoginService] },
 
 
   { path: 'empresa_index',  component: EmpresaIndexComponent,
   canActivate: [AfterLoginService] },
   { path: 'empresa_form',  component: EmpresaFormComponent,
-  canActivate: [AfterLoginService] },
-
-
-  { path: 'ofertaindex',  component: OfertalabIndexComponent ,
-  canActivate: [AfterLoginService]},
-
-
-  { path: 'perfilegresado',  component: PerfilegresadoComponent,
   canActivate: [AfterLoginService] },
 
 
@@ -125,21 +80,13 @@ const appRoutes: Routes = [
     ResponseResetComponent,
 
     PageNotFoundComponent,
-    ClienteIndexComponent,
-    ClienteFormComponent,
-    CapacitacionIndexComponent,
     EgresadoIndexComponent,
-    CapacitacionFormComponent,
     EgresadoFormComponent,
-    EgresadoDatosIndexComponent,
-    DatosGeneralesIndexComponent,
 
-    OfertaLaboralComponent,
-    PerfilegresadoComponent,
+
     FilterPipe,
 
-    CursosoferIndexComponent,
-    OfertalabIndexComponent,
+    
     IndexIndexComponent,
     MostrarEgresadoIndexComponent,
     MostrarEgresadoFormComponent,
