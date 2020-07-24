@@ -36,6 +36,7 @@ import { CursoIndexComponent } from './curso-index/curso-index.component';
 import { CursoFormComponent } from './curso-form/curso-form.component';
 import { EmpresaIndexComponent } from './empresa-index/empresa-index.component';
 import { EmpresaFormComponent } from './empresa-form/empresa-form.component';
+import { PerfilegresadoComponent } from './perfilegresado/perfilegresado.component';
 
 const appRoutes: Routes = [
 
@@ -60,6 +61,9 @@ const appRoutes: Routes = [
   { path: 'empresa_index',  component: EmpresaIndexComponent,
   canActivate: [AfterLoginService] },
   { path: 'empresa_form',  component: EmpresaFormComponent,
+  canActivate: [AfterLoginService] },
+
+  { path: 'perfilegresado',  component: PerfilegresadoComponent,
   canActivate: [AfterLoginService] },
 
 
@@ -95,7 +99,8 @@ const appRoutes: Routes = [
     CursoIndexComponent,
     CursoFormComponent,
     EmpresaIndexComponent,
-    EmpresaFormComponent
+    EmpresaFormComponent,
+    PerfilegresadoComponent
   ],
   imports: [
     BrowserModule,
