@@ -1,4 +1,4 @@
-
+<button type="button"  routerLink="/empresa_form" routerLinkActive="active" class="btn btn-secondary"> agregar </button>
 <table class="table" >
     <thead class="thead-secundary bg-primary">
       <tr>
@@ -22,7 +22,7 @@
         <td>{{ em.empresa_rubro }}</td>
         <td>{{ em.egresado_id }}</td>
         <span><button (click)="delete(em.empresa_id)">Delete</button></span>
-        <td ><button type="button"  routerLink="/mostraregresadosform/{{ em.empresa_id }}" routerLinkActive="active" class="btn btn-secondary"> editar </button></td>
+        <td ><button type="button"  routerLink="/empresa_form/{{ em.empresa_id }}" routerLinkActive="active" class="btn btn-secondary"> editar </button></td>
       </tr>
     </tbody>
 </table>

@@ -47,6 +47,7 @@ import { DetalleFormComponent } from './detalle-form/detalle-form.component';
 import { CursoIndexComponent } from './curso-index/curso-index.component';
 import { CursoFormComponent } from './curso-form/curso-form.component';
 import { EmpresaIndexComponent } from './empresa-index/empresa-index.component';
+import { EmpresaFormComponent } from './empresa-form/empresa-form.component';
 
 const appRoutes: Routes = [
 
@@ -89,9 +90,15 @@ const appRoutes: Routes = [
 
   { path: 'cursos_form',  component: CursoFormComponent,
   canActivate: [AfterLoginService] },
+  { path: 'cursos_form/:id',  component: CursoFormComponent,
+  canActivate: [AfterLoginService] },
+
 
   { path: 'empresa_index',  component: EmpresaIndexComponent,
   canActivate: [AfterLoginService] },
+  { path: 'empresa_form',  component: EmpresaFormComponent,
+  canActivate: [AfterLoginService] },
+
 
   { path: 'ofertaindex',  component: OfertalabIndexComponent ,
   canActivate: [AfterLoginService]},
@@ -140,7 +147,8 @@ const appRoutes: Routes = [
     DetalleFormComponent,
     CursoIndexComponent,
     CursoFormComponent,
-    EmpresaIndexComponent
+    EmpresaIndexComponent,
+    EmpresaFormComponent
   ],
   imports: [
     BrowserModule,
