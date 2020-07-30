@@ -7,7 +7,7 @@ export class FilterPipe implements PipeTransform {
   
   
   transform(value: any, arg: any): any {
-    if (arg === ''|| arg.length < 1) return value;
+    if (arg === ''|| arg.length < 3) return value;
     const resultPost = [];
     for(const ed of value){
       if(ed.egresado_nombre.toLowerCase().indexOf(arg)> -1){

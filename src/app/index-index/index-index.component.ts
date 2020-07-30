@@ -49,5 +49,6 @@ export class IndexIndexComponent implements OnInit {
       this.Auth.changeAuthStatus(false);
       this.router.navigateByUrl('/login');
     }
+    
 
 }
