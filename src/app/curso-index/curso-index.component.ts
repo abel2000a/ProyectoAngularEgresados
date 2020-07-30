@@ -10,20 +10,25 @@ import { CursosService } from '../services/cursos.service';
 export class CursoIndexComponent implements OnInit {
 
   list;
+  
   constructor(
     private route: ActivatedRoute,
     private cursosservice: CursosService,
+ 
   ) {
     this.getList();
+   
   }
   ngOnInit() {
     this.getList();
+  
   }
   private getList() {
     this.cursosservice.getList().subscribe(response => {
       this.list=response;
     });
   }
+  
   delete(cursos_id) {
     console.log("delete:"+cursos_id);
     this.cursosservice.delete(cursos_id).subscribe(response => {

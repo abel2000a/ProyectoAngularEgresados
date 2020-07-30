@@ -26,7 +26,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { EgresadoIndexComponent } from './egresado-index/egresado-index.component';
 import { EgresadoFormComponent } from './egresado-form/egresado-form.component';
-import { FilterPipe } from './pipes/filter.pipe';
 import { IndexIndexComponent } from './index-index/index-index.component';
 import { MostrarEgresadoIndexComponent } from './mostrar-egresado-index/mostrar-egresado-index.component';
 import { MostrarEgresadoFormComponent } from './mostrar-egresado-form/mostrar-egresado-form.component';
@@ -37,6 +36,8 @@ import { CursoFormComponent } from './curso-form/curso-form.component';
 import { EmpresaIndexComponent } from './empresa-index/empresa-index.component';
 import { EmpresaFormComponent } from './empresa-form/empresa-form.component';
 import { PerfilegresadoComponent } from './perfilegresado/perfilegresado.component';
+import { EmpresaEgreComponent } from './empresa-egre/empresa-egre.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 const appRoutes: Routes = [
 
@@ -45,24 +46,36 @@ const appRoutes: Routes = [
   canActivate: [AfterLoginService]},
   { path: 'mostraregresadosform',  component: MostrarEgresadoFormComponent ,
   canActivate: [AfterLoginService]},
+  { path: 'mostraregresadosform/:id',  component: MostrarEgresadoFormComponent ,
+  canActivate: [AfterLoginService]},
   
   
   { path: 'detalleindex',  component: DetalleIndexComponent ,
   canActivate: [AfterLoginService]},
   { path: 'detalleform',  component: DetalleFormComponent ,
   canActivate: [AfterLoginService]},
+  { path: 'detalleform/:id',  component: DetalleFormComponent ,
+  canActivate: [AfterLoginService]},
 
   { path: 'cursos_index',  component: CursoIndexComponent,
   canActivate: [AfterLoginService] },
   { path: 'cursos_form',  component: CursoFormComponent,
   canActivate: [AfterLoginService] },
-
+  { path: 'cursos_form/:id',  component: CursoFormComponent,
+  canActivate: [AfterLoginService] },
+  
 
   { path: 'empresa_index',  component: EmpresaIndexComponent,
   canActivate: [AfterLoginService] },
   { path: 'empresa_form',  component: EmpresaFormComponent,
   canActivate: [AfterLoginService] },
+  { path: 'empresa_form/:id',  component: EmpresaFormComponent,
+  canActivate: [AfterLoginService] },
 
+  { path: 'egresadoem/:id',  component: EmpresaEgreComponent,
+  canActivate: [AfterLoginService] },
+
+  
   { path: 'perfilegresado',  component: PerfilegresadoComponent,
   canActivate: [AfterLoginService] },
 
@@ -100,7 +113,8 @@ const appRoutes: Routes = [
     CursoFormComponent,
     EmpresaIndexComponent,
     EmpresaFormComponent,
-    PerfilegresadoComponent
+    PerfilegresadoComponent,
+    EmpresaEgreComponent
   ],
   imports: [
     BrowserModule,

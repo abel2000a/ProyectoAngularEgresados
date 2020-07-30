@@ -9,6 +9,7 @@ import { EgresadoService } from '../services/egresado.service';
 })
 export class MostrarEgresadoIndexComponent implements OnInit {
 
+  filterPost = '';
   list;
   constructor(
     private route: ActivatedRoute,

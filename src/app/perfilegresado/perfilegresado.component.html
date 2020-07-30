@@ -41,3 +41,21 @@
       </a> 
     </div>
   </div>
+  
+<table class="table" >
+  <thead class="thead-secundary bg-primary">
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Lugar</th>
+      <th scope="col">Fecha</th> 
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let me of list ">
+      <td >{{ me.cursos_nombre }}</td>
+      <td>{{ me.cursos_lugar }}</td>
+      <td>{{ me.cursos_fecha }}</td>
+    </tr>
+  </tbody>
+</table>

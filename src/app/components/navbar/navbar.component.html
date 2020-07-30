@@ -22,9 +22,11 @@
                   <a class="nav-link" routerLink="/detalleindex">DETALLE DEL TRABAJO</a>
                 </li>
             </ul>
-          
+      
         </div>
-        <div>           
+        <div>
+          <a class="navbar-brand" href="login" (click)="logout($event)" >Ingresar</a>
+                        
             <a class="navbar-brand" href="#" (click)="logout($event)" *ngIf="loggedIn">Cerrar sesion</a>
               
             <a class="navbar-brand" routerLink="perfilegresado" *ngIf="loggedIn">Perfil</a>
@@ -32,9 +34,7 @@
         <div class="logo">
             <img class="logoclas" src="/assets/imagenes/Logo-UPeU.png" alt="Logo" width="80px">
         </div>
-        
 </nav> 
-
 <div class="col-lg-12">              
   <app-index-index></app-index-index>      
 </div> 

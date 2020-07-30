@@ -1,14 +1,19 @@
 
-    <input class = "form-control mr-sm-2" type = "text" placeholder = "Buscar">
-    <button class = "btn btn-secundario my-2 my-sm-0" type = "submit"> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Buscar </font> </font> </button>
-    
-    <button type="button"  routerLink="/mostraregresadosform" routerLinkActive="active" class="btn btn-secondary"> agregar </button>
-
+    <h1>BUSCAR</h1>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" name="filterPost" placeholder="Search..." [(ngModel)]="filterPost">
+        </div>
+      </div>
+    </div>
+   <!--<button type="button"  routerLink="/mostraregresadosform" routerLinkActive="active" class="btn btn-secondary"> agregar </button>
+   --> 
     <table class="table" >
         <thead class="thead-secundary bg-primary">
           <tr>
             <th scope="col">Codigo</th>
-            <th scope="col">Apellido Paaterno</th>
+            <th scope="col">Apellido Paterno</th>
             <th scope="col">Apellido Materno</th>
             <th scope="col">Nombre</th>
             <th scope="col">DNI</th>
@@ -18,8 +23,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let ed of list">
-            <td >{{ ed.egresado_codigo }}</td>
+          <tr *ngFor="let ed of list | filter:filterPost">
+            <td routerLink="/egresadoem/{{ ed.egresado_id }}" >{{ ed.egresado_codigo }}</td>
             <td>{{ ed.egresado_ap_paterno }}</td>
             <td>{{ ed.egresado_ap_materno }}</td>
             <td>{{ ed.egresado_nombre }}</td>

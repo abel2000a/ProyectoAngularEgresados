@@ -5,20 +5,19 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
   
-  transform(value: any, arg: any[]): any {
-    const resultPost= [];
-    for(const post of value){
-      if(post.nombreempresa.toLowerCase().indexOf(arg)> -1){
-        resultPost.push(post)
-      }
-      if(post.descripcion.toLowerCase().indexOf(arg)> -1){
-        resultPost.push(post)
-      }
-      if(post.telefono.toLowerCase().indexOf(arg)> -1){
-        resultPost.push(post)
-      }
-      if(post.direccion.toLowerCase().indexOf(arg)> -1){
-        resultPost.push(post)
+  
+  transform(value: any, arg: any): any {
+    if (arg === ''|| arg.length < 1) return value;
+    const resultPost = [];
+    for(const ed of value){
+      if(ed.egresado_nombre.toLowerCase().indexOf(arg)> -1){
+        resultPost.push(ed)
+      }if(ed.egresado_codigo.toLowerCase().indexOf(arg)> -1){
+        resultPost.push(ed)
+      }if(ed.egresado_ap_paterno.toLowerCase().indexOf(arg)> -1){
+        resultPost.push(ed)
+      }if(ed.egresado_ap_materno.toLowerCase().indexOf(arg)> -1){
+        resultPost.push(ed)
       }
     }
     return resultPost;

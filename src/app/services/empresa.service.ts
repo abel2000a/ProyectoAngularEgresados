@@ -17,6 +17,9 @@ export class EmpresaService {
   public getById(empresa_id): Observable<any> {
     return this.http.get<any>(`${this.endPoint}/${empresa_id}`);
   }
+  public getByIdeg(egresado_id): Observable<any> {
+    return this.http.get<any>(`${this.endPoint}/${egresado_id}`);
+  }
   public add(data): Observable<any> {
     return this.http.post<any>(`${this.endPoint}`, data);
   }
