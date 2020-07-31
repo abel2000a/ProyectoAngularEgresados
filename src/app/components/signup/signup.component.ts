@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginSignupService } from '../../services/auth/login-signup.service';
 import { TokenService } from '../../services/auth/token.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,8 @@ export class SignupComponent implements OnInit {
   constructor(
   	private LoginSignup: LoginSignupService,
   	private Token: TokenService,
-  	private router: Router
+    private router: Router,
+    private Auth: AuthService
   	) { }
 
   public form = {
@@ -44,6 +46,7 @@ export class SignupComponent implements OnInit {
   handleResponse(data){
     // console.log(data.access_token);
     this.Token.handle(data.access_token);
+    this.Auth.changeAuthStatus(true);
     this.router.navigateByUrl('/perfilegresado');
   }
 

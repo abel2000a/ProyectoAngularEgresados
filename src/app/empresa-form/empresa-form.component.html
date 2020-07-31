@@ -1,40 +1,27 @@
-<form [formGroup]="empresaForm" (ngSubmit)="save()">
 
-    <div [hidden]="false">
-        <input type="text" formControlName="empresa_id" name="empresa_id" id="empresa_id" >
+<form [formGroup]="empresaForm" (ngSubmit)="save()">
+    <div class="form-row">
+        <div [hidden]="false">
+            <input type="hidden" formControlName="empresa_id" name="empresa_id" id="empresa_id" >
+        </div>
+      <div class="form-group col-md-6">Empresa:
+        <input type="text" class="form-control" formControlName="empresa_nombre" id="empresa_nombre"   >
+      </div>
+      <div class="form-group col-md-6">Correo:
+        <input type="email" class="form-control"  formControlName="empresa_correo" id="empresa_correo" >
+      </div>
+      <div class="form-group col-md-6">Direccion:
+      <input type="text" class="form-control" formControlName="empresa_direccion" id="empresa_direccion" >
+      </div>
+      <div class="form-group col-md-6">Telefono:
+      <input type="text" class="form-control" formControlName="empresa_telefono" id="empresa_telefono" >
+      </div>
+      <div class="form-group col-md-6">Rubro:
+        <input type="text" class="form-control" formControlName="empresa_rubro" id="empresa_rubro" >
+      </div>
+      <div class="form-group col-md-6">Egresado:
+        <input type="text" class="form-control" formControlName="egresado_id" id="egresado_id" >
+      </div>
     </div>
-    <br>
-    <label>
-        Empresa:
-        <input type="text"  formControlName="empresa_nombre" name="empresa_nombre" id="empresa_nombre" required>
-    </label>
-    
-    <br>
-    <label>
-        correo:
-        <input type="text"  formControlName="empresa_correo" name="empresa_correo" id="empresa_correo" required>
-    </label>
-    <br>
-    <label>
-        direccion:
-        <input type="text" formControlName="empresa_direccion" name="empresa_direccion" id="empresa_direccion" required>
-    </label>
-    <br>
-    <label>
-        telefono:
-        <input type="text" formControlName="empresa_telefono" name="empresa_telefono" id="empresa_telefono" required>
-    </label>
-    <br>
-    <label>
-        rubro:
-        <input type="text" formControlName="empresa_rubro" name="empresa_rubro" id="empresa_rubro" required>
-    </label>
-    <br>
-    <label>
-        id:
-        <input type="text" formControlName="egresado_id" name="egresado_id" id="egresado_id" required>
-    </label>
-    <br>
-    <button type="submit" [disabled]="!empresaForm.valid">Save</button>
-    
-</form>
+    <button type="submit" [disabled]="!empresaForm.valid">Save</button>   
+  </form>

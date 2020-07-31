@@ -40,9 +40,9 @@ export class DetalleFormComponent implements OnInit {
   }
   save() {
     console.log(this.detalleForm.value);
-    let detalle_id = this.route.snapshot.paramMap.get('detalle_id');
-    if (detalle_id != null) {
-      this.detalleservice.update(detalle_id, this.detalleForm.value).subscribe(response => {
+    let id = this.route.snapshot.paramMap.get('id');
+    if (id != null) {
+      this.detalleservice.update(id, this.detalleForm.value).subscribe(response => {
         console.log("UPDATE ",response);
       });
     }else{

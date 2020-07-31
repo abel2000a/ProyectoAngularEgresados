@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
 import { EmpresaService } from '../services/empresa.service';
 
 @Component({
@@ -23,7 +21,7 @@ export class EmpresaFormComponent implements OnInit {
   ngOnInit() {
     this.empresaForm = this.formBuild.group({
       
-      empresa_id: ['', [Validators.required]],
+      empresa_id: [''],
       empresa_nombre: ['', [Validators.required]],
       empresa_correo: ['', [Validators.required]],
       empresa_direccion: ['', [Validators.required]],

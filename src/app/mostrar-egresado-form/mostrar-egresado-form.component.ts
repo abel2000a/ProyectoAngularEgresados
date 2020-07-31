@@ -22,7 +22,7 @@ export class MostrarEgresadoFormComponent implements OnInit {
 
     this.EgresadoForm = this.formBuild.group({
       
-      egresado_id: ['', [Validators.required]],
+      egresado_id: [''],
       egresado_nombre: ['', [Validators.required]],
       egresado_ap_materno: ['', [Validators.required]],
       egresado_ap_paterno: ['', [Validators.required]],

@@ -5,13 +5,13 @@
         <div class="card text-white bg-primary mb-3 " style="width: 230px;">
               <img src="../../assets/imagenes/icon-user-slide.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <a href="#" class="btn btn" id="aea">Perfil</a>
+            <a href="mostraregresadosindex" class="btn btn" id="aea">Perfil</a>
           </div>
         </div>
       </a> 
     </div>
     <div class="col-sm">
-        <a class="navbar-brand"routerLink="/ofertaegresado">
+        <a class="navbar-brand"href="https://www.convocatoriasdetrabajo.com/ofertas-de-empleo-para-INGENIEROS-DE-SISTEMAS-9.html">
         <div class="card text-white bg-primary mb-3 " style="width: 230px;">
               <img src="../../assets/imagenes/53011.png" class="card-img-top" alt="...">
           <div class="card-body">
@@ -20,6 +20,7 @@
         </div>
       </a> 
     </div>
+  <!--
     <div class="col-sm">
         <a class="navbar-brand"routerLink="/ofertaegresado">
         <div class="card text-white bg-primary mb-3 " style="width: 230px;">
@@ -40,22 +41,5 @@
         </div>
       </a> 
     </div>
-  </div>
+  </div>-->
   
-<table class="table" >
-  <thead class="thead-primary bg-primary">
-    <tr>
-      <th scope="col">Nombre</th>
-      <th scope="col">Lugar</th>
-      <th scope="col">Fecha</th> 
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let me of list ">
-      <td >{{ me.cursos_nombre }}</td>
-      <td>{{ me.cursos_lugar }}</td>
-      <td>{{ me.cursos_fecha }}</td>
-    </tr>
-  </tbody>
-</table>

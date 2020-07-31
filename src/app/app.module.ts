@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RequestResetComponent } from './components/password/request-reset/request-reset.component';
 import { ResponseResetComponent } from './components/password/response-reset/response-reset.component';
 
+import { LogindatosService } from './services/logindatos.service';
 import { LoginSignupService } from './services/auth/login-signup.service';
 import { TokenService } from './services/auth/token.service';
 import { AuthService } from './services/auth/auth.service';
@@ -25,7 +26,6 @@ import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { EgresadoIndexComponent } from './egresado-index/egresado-index.component';
-import { EgresadoFormComponent } from './egresado-form/egresado-form.component';
 import { IndexIndexComponent } from './index-index/index-index.component';
 import { MostrarEgresadoIndexComponent } from './mostrar-egresado-index/mostrar-egresado-index.component';
 import { MostrarEgresadoFormComponent } from './mostrar-egresado-form/mostrar-egresado-form.component';
@@ -38,6 +38,9 @@ import { EmpresaFormComponent } from './empresa-form/empresa-form.component';
 import { PerfilegresadoComponent } from './perfilegresado/perfilegresado.component';
 import { EmpresaEgreComponent } from './empresa-egre/empresa-egre.component';
 import { FilterPipe } from './pipes/filter.pipe';
+
+
+import { MatSliderModule } from '@angular/material/slider';
 
 const appRoutes: Routes = [
 
@@ -98,7 +101,6 @@ const appRoutes: Routes = [
 
     PageNotFoundComponent,
     EgresadoIndexComponent,
-    EgresadoFormComponent,
 
 
     FilterPipe,
@@ -124,12 +126,14 @@ const appRoutes: Routes = [
     HttpClientModule,
     SnotifyModule,
     BrowserAnimationsModule,
+    MatSliderModule,
     RouterModule.forRoot(
       appRoutes,
       
     )
   ],
   providers: [
+    LogindatosService,
     LoginSignupService,
     TokenService,
     AuthService,
